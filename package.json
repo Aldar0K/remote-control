@@ -3,11 +3,11 @@
     "version": "1.0.0",
     "description": "Template for the WebSocket remote control task",
     "main": "index.js",
-    "type": "module",
     "scripts": {
-        "start": "node ./index.js",
-        "start:dev": "nodemon ./index.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "tsc && node ./build/index.js",
+        "start:dev": "npx nodemon",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
     },
     "author": "Andrei Auchynnikau",
     "keywords": [],
@@ -20,6 +20,7 @@
     },
     "devDependencies": {
         "@types/node": "^18.11.18",
+        "@types/ws": "^8.5.4",
         "@typescript-eslint/eslint-plugin": "^5.48.2",
         "@typescript-eslint/parser": "^5.48.2",
         "eslint": "^8.32.0",
